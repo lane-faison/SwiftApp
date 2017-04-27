@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Intro App
 //
-//  Created by Lane Faison on 4/26/17.
+//  Created by Lane Faison on 4/26/2017.
 //  Copyright © 2017 Lane Faison. All rights reserved.
 //
 
