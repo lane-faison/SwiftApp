@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    var addition : Bool = true
 
     @IBOutlet weak var theLabel: UILabel!
     
@@ -16,24 +19,34 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var text2: UITextField!
     
+    @IBAction func additionTrue(_ sender: Any) {
+        addition = true
+    }
     
+    @IBAction func subtractionTrue(_ sender: Any) {
+        addition = false
+    }
     
     @IBAction func buttonTapped(_ sender: Any) {
-        print(text1.text!)
-        print(text2.text!)
-        theLabel.text = "Answer is \(Double(text1.text!)! + Double(text2.text!)!)"
+        
+        
+        if addition {
+            theLabel.text = "Answer is \(Double(text1.text!)! + Double(text2.text!)!)"
+        } else {
+            theLabel.text = "Answer is \(Double(text1.text!)! - Double(text2.text!)!)"
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-  
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
 

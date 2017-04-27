@@ -28,8 +28,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWs-FA-Vau">
-                                <rect key="frame" x="172" y="111" width="30" height="30"/>
-                                <state key="normal" title="Tap"/>
+                                <rect key="frame" x="155" y="111" width="64" height="30"/>
+                                <state key="normal" title="Calculate"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JLG-Kw-WRY"/>
                                 </connections>
@@ -52,14 +52,32 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubp-Ll-9gf">
+                                <rect key="frame" x="159" y="318" width="57" height="30"/>
+                                <state key="normal" title="Addition"/>
+                                <connections>
+                                    <action selector="additionTrue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cn7-vq-3Y2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FO-8L-KPZ">
+                                <rect key="frame" x="147.5" y="366" width="80" height="30"/>
+                                <state key="normal" title="Subtraction"/>
+                                <connections>
+                                    <action selector="subtractionTrue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CsI-wT-a7i"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eWs-FA-Vau" firstAttribute="centerX" secondItem="MnT-bh-jrL" secondAttribute="centerX" id="6hH-mM-YOG"/>
+                            <constraint firstItem="Ubp-Ll-9gf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7DR-ZU-5oP"/>
                             <constraint firstItem="MnT-bh-jrL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Pb-5o-s3t"/>
                             <constraint firstItem="s1B-34-vq5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cp1-Sx-ul7"/>
+                            <constraint firstItem="7FO-8L-KPZ" firstAttribute="top" secondItem="Ubp-Ll-9gf" secondAttribute="bottom" constant="18" id="Hmh-b2-duW"/>
                             <constraint firstItem="eWs-FA-Vau" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HtZ-VC-Ull"/>
+                            <constraint firstItem="Ubp-Ll-9gf" firstAttribute="top" secondItem="s1B-34-vq5" secondAttribute="bottom" constant="37" id="MRe-oF-wYv"/>
                             <constraint firstItem="eWs-FA-Vau" firstAttribute="top" secondItem="MnT-bh-jrL" secondAttribute="bottom" constant="20" id="OwN-8B-i8n"/>
+                            <constraint firstItem="7FO-8L-KPZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aeA-hf-JPu"/>
                             <constraint firstItem="YBD-0b-Ijg" firstAttribute="top" secondItem="eWs-FA-Vau" secondAttribute="bottom" constant="40" id="d2S-tn-asQ"/>
                             <constraint firstItem="s1B-34-vq5" firstAttribute="top" secondItem="YBD-0b-Ijg" secondAttribute="bottom" constant="40" id="iD1-xh-Hta"/>
                             <constraint firstItem="YBD-0b-Ijg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jWb-GS-wUx"/>
@@ -67,6 +85,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="additionTrue" destination="Ubp-Ll-9gf" id="ump-Gw-Kez"/>
                         <outlet property="text1" destination="YBD-0b-Ijg" id="j2A-Ec-TSX"/>
                         <outlet property="text2" destination="s1B-34-vq5" id="qw4-Os-muc"/>
                         <outlet property="theLabel" destination="MnT-bh-jrL" id="U3T-SU-ojh"/>
